@@ -1,5 +1,5 @@
 const build = [
-  "/_app/start-2460325d.js",
+  "/_app/start-21ab0f28.js",
   "/_app/pages/__layout.svelte-c6f3cb71.js",
   "/_app/assets/pages/__layout.svelte-50949e92.css",
   "/_app/error.svelte-b8c7cb32.js",
@@ -17,13 +17,14 @@ const build = [
   "/_app/chunks/StudentForm-45db6a95.js"
 ];
 const files = [
+  "/.nojekyll",
   "/192.png",
   "/256.png",
   "/512.png",
   "/favicon.png",
   "/manifest.json"
 ];
-const version = "1660922711417";
+const version = "1660924160886";
 const globalThis = self;
 const sw = globalThis;
 const ASSETS = `cache${version}`;
