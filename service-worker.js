@@ -1,5 +1,5 @@
 const build = [
-  "/_app/start-21ab0f28.js",
+  "/_app/start-523db464.js",
   "/_app/pages/__layout.svelte-c6f3cb71.js",
   "/_app/assets/pages/__layout.svelte-50949e92.css",
   "/_app/error.svelte-b8c7cb32.js",
@@ -24,7 +24,7 @@ const files = [
   "/favicon.png",
   "/manifest.json"
 ];
-const version = "1660924160886";
+const version = "1660924905176";
 const globalThis = self;
 const sw = globalThis;
 const ASSETS = `cache${version}`;
