@@ -9,11 +9,11 @@
 		<link rel="apple-touch-icon" href="./192.png" />
 		<meta http-equiv="content-security-policy" content=""><title>Class Roster</title>
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-50949e92.css">
-	<link rel="modulepreload" href="/_app/start-e7201b14.js">
+	<link rel="modulepreload" href="/_app/start-27b17fa9.js">
 	<link rel="modulepreload" href="/_app/chunks/index-b1f754cc.js">
 	<link rel="modulepreload" href="/_app/chunks/singletons-d1fb5791.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-c6f3cb71.js">
-	<link rel="modulepreload" href="/_app/pages/roster/index.svelte-2535f4d1.js">
+	<link rel="modulepreload" href="/_app/pages/roster/index.svelte-96608aa3.js">
 	<link rel="modulepreload" href="/_app/chunks/db-c0070083.js">
 			<script>
 		if ('serviceWorker' in navigator) {
@@ -40,24 +40,38 @@
 <div class="p-2">
 
 <h2 class="title is-2">Class Roster</h2>
-<a class="button is-primary" href="/roster/edit">Add</a>
-<table class="table"><thead><tr><th>First Name</th>
-            <th>Last Name</th>
+<div class="field is-grouped"><div class="control"><a class="button is-primary" href="/roster/edit">Add One</a></div>
+    <div class="control"><button class="button is-primary">Add Multiple</button></div></div>
+
+<table class="table is-fullwidth"><thead><tr><th>First Name</th>
+            <th class="is-selected">Last Name</th>
+            <th>Rules</th>
             <th></th></tr></thead>
     <tbody></tbody></table>
 
+<div class="modal"><div class="modal-background"></div></div>
+
 <div class="modal"><div class="modal-background"></div>
     <div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Are you sure?</p>
-        <button class="delete" aria-label="close"></button></header>
-      <section class="modal-card-body"><div class="block">Are you sure you want to delete this student? This action cannot be undone.</div></section>
-      <footer class="modal-card-foot"><button class="button is-danger">Delete</button>
-        <button class="button">Cancel</button></footer></div></div></div>
+            <button class="delete" aria-label="close"></button></header>
+        <section class="modal-card-body"><div class="block" slot="body">Are you sure you want to delete this student? This action cannot be undone.</div></section>
+        <footer class="modal-card-foot"><button slot="footer" class="button is-danger">Delete</button>
+            <button class="button">Cancel</button></footer></div></div>
+
+<div class="modal"><div class="modal-background"></div>
+    <div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Create Students</p>
+            <button class="delete" aria-label="close"></button></header>
+        <section class="modal-card-body"><p class="is-size-7">Enter each students first and last name, one student per line</p>
+        <textarea class="textarea" rows="10"></textarea></section>
+        <footer class="modal-card-foot"><button class="button is-primary">Save</button>
+    
+            <button class="button">Cancel</button></footer></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="j3l1nw">
-		import { start } from "/_app/start-e7201b14.js";
+		<script type="module" data-sveltekit-hydrate="1jm8fk1">
+		import { start } from "/_app/start-27b17fa9.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="j3l1nw"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1jm8fk1"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -68,7 +82,7 @@
 				error: null,
 				nodes: [
 					import("/_app/pages/__layout.svelte-c6f3cb71.js"),
-						import("/_app/pages/roster/index.svelte-2535f4d1.js")
+						import("/_app/pages/roster/index.svelte-96608aa3.js")
 				],
 				params: {},
 				routeId: "roster"
