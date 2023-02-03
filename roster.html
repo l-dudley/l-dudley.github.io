@@ -9,13 +9,13 @@
 		<link rel="apple-touch-icon" href="./192.png" />
 		<meta http-equiv="content-security-policy" content=""><title>Class Roster</title>
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-50949e92.css">
-	<link rel="modulepreload" href="/_app/start-1f7a56a9.js">
-	<link rel="modulepreload" href="/_app/chunks/index-949cf3b2.js">
+	<link rel="modulepreload" href="/_app/start-8b3f5f30.js">
+	<link rel="modulepreload" href="/_app/chunks/index-73f85fd5.js">
 	<link rel="modulepreload" href="/_app/chunks/singletons-d1fb5791.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-25ebd95d.js">
-	<link rel="modulepreload" href="/_app/pages/roster/index.svelte-dae6aa17.js">
-	<link rel="modulepreload" href="/_app/chunks/db-a022f0f9.js">
-	<link rel="modulepreload" href="/_app/chunks/Modal-051e15c7.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-63b5fd5e.js">
+	<link rel="modulepreload" href="/_app/pages/roster/index.svelte-2995ac4b.js">
+	<link rel="modulepreload" href="/_app/chunks/db-61e6d286.js">
+	<link rel="modulepreload" href="/_app/chunks/TextField-21a97b92.js">
 			<script>
 		if ('serviceWorker' in navigator) {
 			addEventListener('load', () => {
@@ -32,7 +32,6 @@
 			<span aria-hidden="true"></span>
 			<span aria-hidden="true"></span></button></div>
 
-
 	<div id="navThing" class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a>
 			<a class="navbar-item" href="/roster">Roster</a>
 			<a class="navbar-item" href="/roomlayout">Room Layout</a>
@@ -41,38 +40,49 @@
 <div class="p-2">
 
 <h2 class="title is-2">Class Roster</h2>
-<div class="field is-grouped"><div class="control"><a class="button is-primary" href="/roster/edit">Add One</a></div>
-    <div class="control"><button class="button is-primary">Add Multiple</button></div></div>
+<div class="field has-addons"><div class="control is-expanded is-expanded"><div class="select is-fullwidth is-fullwidth"><select></select></div></div>
+	<div class="control"><button class="button">Add Roster</button></div></div>
+<div class="field is-grouped"><div class="control"><a class="button is-primary" href="/roster/edit?roster=1">Add One</a></div>
+	<div class="control"><button class="button is-primary">Add Multiple</button></div></div>
 
 <table class="table is-fullwidth"><thead><tr><th>First Name</th>
-            <th class="is-selected">Last Name</th>
-            <th>Rules</th>
-            <th></th></tr></thead>
-    <tbody></tbody></table>
+			<th class="is-selected">Last Name</th>
+			<th>Rules</th>
+			<th></th></tr></thead>
+	<tbody></tbody></table>
 
 <div class="modal"><div class="modal-background"></div></div>
 
 <div class="modal"><div class="modal-background"></div>
-    <div class="modal-card" style="width: 640;"><header class="modal-card-head"><p class="modal-card-title">Are you sure?</p>
-            <button class="delete" aria-label="close"></button></header>
-        <section class="modal-card-body"><div class="block" slot="body">Are you sure you want to delete this student? This action cannot be undone.</div></section>
-        <footer class="modal-card-foot"><button slot="footer" class="button is-danger">Delete</button>
-            <button class="button">Cancel</button></footer></div></div>
+	<div class="modal-card" style="width: 640;"><header class="modal-card-head"><p class="modal-card-title">Are you sure?</p>
+			<button class="delete" aria-label="close"></button></header>
+		<section class="modal-card-body"><div class="block" slot="body">Are you sure you want to delete this student? This action cannot be undone.</div></section>
+		<footer class="modal-card-foot"><button slot="footer" class="button is-danger">Delete</button>
+			<button class="button">Cancel</button></footer></div></div>
 
 <div class="modal"><div class="modal-background"></div>
-    <div class="modal-card" style="width: 640;"><header class="modal-card-head"><p class="modal-card-title">Create Students</p>
-            <button class="delete" aria-label="close"></button></header>
-        <section class="modal-card-body"><p class="is-size-7">Enter each students first and last name, one student per line</p>
-        <textarea class="textarea" rows="10"></textarea></section>
-        <footer class="modal-card-foot"><button class="button is-primary">Save</button>
-    
-            <button class="button">Cancel</button></footer></div></div></div>
+	<div class="modal-card" style="width: 640;"><header class="modal-card-head"><p class="modal-card-title">Create Students</p>
+			<button class="delete" aria-label="close"></button></header>
+		<section class="modal-card-body"><p class="is-size-7">Enter each students first and last name, one student per line</p>
+		<textarea class="textarea" rows="10"></textarea></section>
+		<footer class="modal-card-foot"><button class="button is-primary">Save</button>
+	
+			<button class="button">Cancel</button></footer></div></div>
+
+<div class="modal"><div class="modal-background"></div>
+	<div class="modal-card" style="width: 640;"><header class="modal-card-head"><p class="modal-card-title">Create Roster</p>
+			<button class="delete" aria-label="close"></button></header>
+		<section class="modal-card-body"><div class="field"><label for="txtFirstName" class="label">Roster Name</label>
+	<div id="txtFirstName" class="control"><input class="input" value=""></div></div></section>
+		<footer class="modal-card-foot"><button class="button is-primary">Save</button>
+	
+			<button class="button">Cancel</button></footer></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1dunsyp">
-		import { start } from "/_app/start-1f7a56a9.js";
+		<script type="module" data-sveltekit-hydrate="1ap7nvz">
+		import { start } from "/_app/start-8b3f5f30.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1dunsyp"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1ap7nvz"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -82,8 +92,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-25ebd95d.js"),
-						import("/_app/pages/roster/index.svelte-dae6aa17.js")
+					import("/_app/pages/__layout.svelte-63b5fd5e.js"),
+						import("/_app/pages/roster/index.svelte-2995ac4b.js")
 				],
 				params: {},
 				routeId: "roster"
