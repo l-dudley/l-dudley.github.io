@@ -7,22 +7,25 @@
 		<link rel="manifest" href="./manifest.json" />
 		<meta name="theme-color" content="#f69435" />
 		<link rel="apple-touch-icon" href="./192.png" />
-		<meta http-equiv="content-security-policy" content=""><title>Class Roster</title>
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-50949e92.css">
-	<link rel="modulepreload" href="/_app/start-8b3f5f30.js">
-	<link rel="modulepreload" href="/_app/chunks/index-73f85fd5.js">
-	<link rel="modulepreload" href="/_app/chunks/singletons-d1fb5791.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-63b5fd5e.js">
-	<link rel="modulepreload" href="/_app/pages/roster/index.svelte-2995ac4b.js">
-	<link rel="modulepreload" href="/_app/chunks/db-61e6d286.js">
-	<link rel="modulepreload" href="/_app/chunks/TextField-21a97b92.js">
-			<script>
-		if ('serviceWorker' in navigator) {
-			addEventListener('load', () => {
-				navigator.serviceWorker.register('/service-worker.js');
-			});
-		}
-	</script>
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_layout-2091b991.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-5e8f68c8.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-8c652ea8.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-23e59a3d.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-cbd12ca6.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/roster/_page.svelte-0d149fbf.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/db-e565effc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/TextField-9e86c491.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores-7110a9aa.js">
+		<script>
+			if ('serviceWorker' in navigator) {
+				addEventListener('load', function () {
+					navigator.serviceWorker.register('./service-worker.js');
+				});
+			}
+		</script><title>Class Roster</title><!-- HEAD_svelte-1ue2fn_START --><!-- HEAD_svelte-1ue2fn_END -->
 	</head>
 	<body>
 		<div>
@@ -80,25 +83,21 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1ap7nvz">
-		import { start } from "/_app/start-8b3f5f30.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1ap7nvz"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-63b5fd5e.js"),
-						import("/_app/pages/roster/index.svelte-2995ac4b.js")
-				],
-				params: {},
-				routeId: "roster"
-			}
-		});
-	</script></div>
+			import { start } from "./_app/immutable/start-5e8f68c8.js";
+
+			start({
+				env: {},
+				paths: {"assets":"","base":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1ap7nvz"]').parentNode,
+				version: "1675564711609",
+				hydrate: {
+					node_ids: [0, 5],
+					data: [null,null],
+					form: null,
+					error: null
+				}
+			});
+		</script>
+	</div>
 	</body>
 </html>
