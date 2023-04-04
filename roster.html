@@ -8,24 +8,18 @@
 		<meta name="theme-color" content="#f69435" />
 		<link rel="apple-touch-icon" href="./192.png" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout-2091b991.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-a82524b1.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-8c652ea8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-23e59a3d.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-cbd12ca6.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/roster/_page.svelte-0d149fbf.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/db-e565effc.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/TextField-9e86c491.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/stores-7110a9aa.js">
-		<script>
-			if ('serviceWorker' in navigator) {
-				addEventListener('load', function () {
-					navigator.serviceWorker.register('./service-worker.js');
-				});
-			}
-		</script><title>Class Roster</title><!-- HEAD_svelte-1ue2fn_START --><!-- HEAD_svelte-1ue2fn_END -->
+		<link href="./_app/immutable/assets/_layout.2091b991.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.4a544387.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.35c0646e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.4ff3743b.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.569ff231.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.cb1556ba.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.js.984db11e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/roster-page.svelte.75cea319.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/db.181fcdef.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/TextField.948649ca.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.270600c4.js"><title>Class Roster</title><!-- HEAD_svelte-1ue2fn_START --><!-- HEAD_svelte-1ue2fn_END -->
 	</head>
 	<body>
 		<div>
@@ -82,22 +76,36 @@
 			<button class="button">Cancel</button></footer></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1ap7nvz">
-			import { start } from "./_app/immutable/start-a82524b1.js";
+			
+			<script>
+				{
+					__sveltekit_192dmta = {
+						env: {},
+						base: new URL(".", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
 
-			start({
-				env: {},
-				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1ap7nvz"]').parentNode,
-				version: "1675567113508",
-				hydrate: {
-					node_ids: [0, 5],
-					data: [null,null],
-					form: null,
-					error: null
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.4a544387.js"),
+						import("./_app/immutable/entry/app.569ff231.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_192dmta.element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('./service-worker.js');
+						});
+					}
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 	</body>
 </html>

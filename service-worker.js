@@ -1,73 +1,74 @@
-const m = [
-  "/_app/immutable/chunks/0-4c1cb993.js",
-  "/_app/immutable/chunks/1-79a3adb3.js",
-  "/_app/immutable/chunks/2-4f2e9e58.js",
-  "/_app/immutable/chunks/3-89a4e6d2.js",
-  "/_app/immutable/chunks/4-98fe208b.js",
-  "/_app/immutable/chunks/5-bda450d1.js",
-  "/_app/immutable/chunks/6-74ac6833.js",
-  "/_app/immutable/chunks/7-385144f0.js",
-  "/_app/immutable/assets/StudentForm-5abcf908.css",
-  "/_app/immutable/chunks/SelectField-9f11e83a.js",
-  "/_app/immutable/chunks/StudentForm-89731577.js",
-  "/_app/immutable/chunks/TextField-9e86c491.js",
-  "/_app/immutable/chunks/_layout-da46b06b.js",
-  "/_app/immutable/chunks/db-e565effc.js",
-  "/_app/immutable/chunks/index-8c652ea8.js",
-  "/_app/immutable/chunks/singletons-23e59a3d.js",
-  "/_app/immutable/chunks/stores-7110a9aa.js",
-  "/_app/immutable/start-a82524b1.js",
-  "/_app/immutable/components/error.svelte-37dabc23.js",
-  "/_app/immutable/assets/_layout-2091b991.css",
-  "/_app/immutable/modules/pages/_layout.js-9cbb603b.js",
-  "/_app/immutable/components/pages/_layout.svelte-cbd12ca6.js",
-  "/_app/immutable/components/pages/_page.svelte-7af34391.js",
-  "/_app/immutable/assets/_page-146204cd.css",
-  "/_app/immutable/components/pages/generate/_page.svelte-27560d68.js",
-  "/_app/immutable/assets/_page-5d421b39.css",
-  "/_app/immutable/components/pages/roomlayout/_page.svelte-c47eaf21.js",
-  "/_app/immutable/components/pages/roster/_page.svelte-0d149fbf.js",
-  "/_app/immutable/components/pages/roster/edit/_page.svelte-d634d2d0.js",
-  "/_app/immutable/components/pages/roster/edit/_id_/_page.svelte-e9f10ea1.js"
-], u = [
-  "/.nojekyll",
-  "/192.png",
-  "/256.png",
-  "/512.png",
-  "/favicon.png",
-  "/manifest.json"
-], l = "1675567113508", c = `cache-${l}`, n = [
-  ...m,
+const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), i = [
+  e + "/_app/immutable/entry/app.569ff231.js",
+  e + "/_app/immutable/chunks/0.9438023c.js",
+  e + "/_app/immutable/chunks/1.b12285c5.js",
+  e + "/_app/immutable/chunks/2.9af5a47a.js",
+  e + "/_app/immutable/chunks/3.57669ab5.js",
+  e + "/_app/immutable/chunks/4.c4bffc25.js",
+  e + "/_app/immutable/chunks/5.a8d39d95.js",
+  e + "/_app/immutable/chunks/6.fbf047fc.js",
+  e + "/_app/immutable/chunks/7.e8de189e.js",
+  e + "/_app/immutable/assets/StudentForm.5abcf908.css",
+  e + "/_app/immutable/chunks/SelectField.cc9fa960.js",
+  e + "/_app/immutable/chunks/StudentForm.bd9616ba.js",
+  e + "/_app/immutable/chunks/TextField.948649ca.js",
+  e + "/_app/immutable/chunks/_layout.da46b06b.js",
+  e + "/_app/immutable/chunks/db.181fcdef.js",
+  e + "/_app/immutable/chunks/index.35c0646e.js",
+  e + "/_app/immutable/chunks/singletons.4ff3743b.js",
+  e + "/_app/immutable/chunks/stores.270600c4.js",
+  e + "/_app/immutable/entry/start.4a544387.js",
+  e + "/_app/immutable/entry/error.svelte.76a6785a.js",
+  e + "/_app/immutable/assets/_layout.2091b991.css",
+  e + "/_app/immutable/entry/_layout.js.984db11e.js",
+  e + "/_app/immutable/entry/_layout.svelte.cb1556ba.js",
+  e + "/_app/immutable/entry/_page.svelte.f586f4ab.js",
+  e + "/_app/immutable/assets/_page.146204cd.css",
+  e + "/_app/immutable/entry/generate-page.svelte.960b12ce.js",
+  e + "/_app/immutable/assets/_page.5d421b39.css",
+  e + "/_app/immutable/entry/roomlayout-page.svelte.4e3f97e9.js",
+  e + "/_app/immutable/entry/roster-page.svelte.75cea319.js",
+  e + "/_app/immutable/entry/roster-edit-page.svelte.15e90ab4.js",
+  e + "/_app/immutable/entry/roster-edit-_id_-page.svelte.9abb24d0.js"
+], l = [
+  e + "/.nojekyll",
+  e + "/192.png",
+  e + "/256.png",
+  e + "/512.png",
+  e + "/favicon.png",
+  e + "/manifest.json"
+], m = "1680581441485", n = `cache-${m}`, u = [
+  ...i,
   // the app itself
-  ...u
+  ...l
   // everything in `static`
 ];
-self.addEventListener("install", (e) => {
-  async function a() {
-    await (await caches.open(c)).addAll(n);
+self.addEventListener("install", (a) => {
+  async function t() {
+    await (await caches.open(n)).addAll(u);
   }
-  e.waitUntil(a());
+  a.waitUntil(t());
 });
-self.addEventListener("activate", (e) => {
-  async function a() {
+self.addEventListener("activate", (a) => {
+  async function t() {
     for (const s of await caches.keys())
-      s !== c && await caches.delete(s);
+      s !== n && await caches.delete(s);
   }
-  e.waitUntil(a());
+  a.waitUntil(t());
 });
-self.addEventListener("fetch", (e) => {
-  if (e.request.method !== "GET")
+self.addEventListener("fetch", (a) => {
+  if (a.request.method !== "GET")
     return;
-  async function a() {
-    const s = new URL(e.request.url), t = await caches.open(c);
-    if (n.includes(s.pathname))
-      return t.match(e.request);
+  async function t() {
+    const s = new URL(a.request.url), p = await caches.open(n);
+    if (u.includes(s.pathname))
+      return p.match(a.request);
     try {
-      const p = await fetch(e.request);
-      return p.status === 200 && t.put(e.request, p.clone()), p;
+      const c = await fetch(a.request);
+      return c.status === 200 && p.put(a.request, c.clone()), c;
     } catch {
-      return t.match(e.request);
+      return p.match(a.request);
     }
   }
-  e.respondWith(a());
+  a.respondWith(t());
 });
